@@ -2,10 +2,8 @@ version: "3.8"
 
 services:
   postiz:
-    container_name: postiz
-    build:
-      context: .
-      dockerfile: Dockerfile
+  container_name: postiz
+  image: ghcr.io/gitroomhq/postiz-app:latest
     restart: always
     environment:
       MAIN_URL: "http://34.121.5.6:5000"
@@ -73,3 +71,4 @@ volumes:
 
 networks:
   postiz-network:
+
